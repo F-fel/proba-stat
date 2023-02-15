@@ -34,11 +34,11 @@
 ---
 ### Fonction de repartition :
 > $F(x)=P(X\leq x)\mid \forall x \in \mathbb{R}$  
-> $P(a<X\leq B) = F(b)-F(a)$.  
+> $P( a < X \leq B) = F(b)-F(a)$  
 
 Doit verifier les proprietes suivantes:
 > + $0\leq F(x)\leq 1 \mid \forall x \in \mathbb{R}$
-> + si $x_1<x_2$ alors $F(x_1)\leq F(x_2)$ (non decroissante)
+> + si $x_1< x_2$ alors $F(x_1)\leq F(x_2)$ (non decroissante)
 > + $\lim_{x\to\infty} F(x) =1$ et $\lim_{x\to -\infty} F(x) =0$
 >
 ---
