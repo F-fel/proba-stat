@@ -52,8 +52,10 @@ Doit verifier les proprietes suivantes:
 > $f(x) = \frac{d}{dt}F(x)$  
 ---
 ## Esperance Mathematique (moyenne)
-> Si X est discrete : $\mu = \sum_{x_i\in \mathbb{R_x}}x_ip(_xi)$  
-> Si X est continu  : $\mu = \int_{-\infty}^{\infty} xf(x)dx$  
+> + Si X est discrete : 
+> $\mu = \sum_{x_i \in \mathbb{R_x}} x_i p(_xi)$  
+> + Si X est continu  : 
+> $\mu = \int_{-\infty}^{\infty} xf(x)dx$  
 > Represente le centre de gravite de la distribution, aussi appele E(X)
 ---
 ## Variance et ecart type :
