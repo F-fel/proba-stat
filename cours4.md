@@ -75,7 +75,7 @@
 ### Hypergeometrique $\rightarrow$ Binomial : 
 > + Conditions :  
 > N est grand, n $\llless$ N  
-> + X~H(n,N,D) $\approx$ X~B(n,$\frac{D}{N}$) (p= $\frac{D}{N}$)
+> + X\~H(n,N,D) $\approx$ X\~B(n,$\frac{D}{N}$) (p= $\frac{D}{N}$)
 
 ---
 ### Binomial $\rightarrow$ Poisson 
