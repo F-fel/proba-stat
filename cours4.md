@@ -81,4 +81,4 @@
 ### Binomial $\rightarrow$ Poisson 
 > + Condition :  
 > n tres grand , p petit
-> + X~B(n,p) $\approx$ X~Poi(c=np)
+> + X\~B(n,p) $\approx$ X\~Poi(c=np)
