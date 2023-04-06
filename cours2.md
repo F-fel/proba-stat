@@ -79,7 +79,7 @@ Doit verifier les proprietes suivantes:
 > $\mu_0' = \mu_0 = 1$  
 > $\mu_1' = \mu , \mu_1 = 0$  
 > $\mu_2 = \sigma^2 = \mu_2' - \mu^2$
-> $u_k = \sum_{j=0}^k (-1)^j{k \choose j}\mu^j\mu_{k-j}'$
+> $u_k = \Sigma_{j=0}^{k} (-1)^j{k \choose j}\mu^j\mu_{k-j}'$
 ---
 ## Symetrie
 
