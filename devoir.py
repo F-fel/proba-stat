@@ -51,6 +51,13 @@ def make_boxplot(array, axe):
 def make_droite_henry(data, axe):
     # Create the normal probability plot
     stats.probplot(data, plot=axe)
+# tests d'hypothese
+def tester_moyenne(data1,data2):
+    t_stat, pval = stats.ttest_ind(data1,data2)
+    return f't_stat : {t_stat}, p = {pval}'
+def tester_variance(data1,data2):
+    t_stat, pval = stats.f_oneway(data1, data2)
+    return f't_stat : {t_stat}, p = {pval}'
 # methode pour les statistique descriptive
 def describe(data):
     df = pd.DataFrame(data)
@@ -64,6 +71,7 @@ def describe(data):
         retval+=f'{x}\t: {description[x]}\n'
     return retval
 def main():
+    separator = "-"*70 + "\n"
     # initialisation 
     data = load_data("DevoirDH23.csv")
     fig,axes = plt.subplots(2,2)
@@ -76,13 +84,13 @@ def main():
     make_droite_henry(sales,axes[1][0])
 
     plt.ioff()
-    plt.savefig("question_a")
+    plt.savefig("question_a.png")
     shapiro = stats.shapiro(sales)
-    with open("partie_a",'w') as f :
-        f.write("shapiro wilk :")
-        f.write(f"stats = {shapiro.statistic} , p = {shapiro.pvalue}")
-        f.write("----------------------------------")
-        f.write("stat descriptive: ")
+    with open("partie_a.txt",'w') as f :
+        f.write("shapiro wilk :\n")
+        f.write(f"stats = {shapiro.statistic} , p = {shapiro.pvalue}\n")
+        f.write(separator)
+        f.write("stat descriptive: \n")
         f.write(describe(sales))
     plt.clf()
 
@@ -95,12 +103,34 @@ def main():
             sales_rural.append(x.sales)
         else :
             sales_urbain.append(x.sales)
-    fig,axes = plt.subplots(1,2)
-    make_boxplot(sales_rural, axes[0])
-    make_boxplot(sales_urbain, axes[1])
-    axes[0].set_title("rural")
-    axes[1].set_title("urbain")
-    plt.show()
+    fig,axes = plt.subplots(2,2)
+    make_boxplot(sales_rural, axes[1][0])
+    make_boxplot(sales_urbain, axes[1][1])
+    axes[1][0].set_title("Tukey Rural")
+    axes[1][1].set_title("Tukey Urbain")
+
+    make_histogramme(sales_rural, axes[0][0])
+    make_histogramme(sales_urbain, axes[0][1])
+    axes[0][0].set_title("Histogramme Rural")
+    axes[0][1].set_title("Histogramme Urbain")
+    
+    with open("partie_b.txt","w") as f:
+        f.write(separator*2)
+        f.write("Stat descriptive:\n")
+        f.write("rural : \n")
+        f.write(separator)
+        f.write(describe(sales_rural))
+        f.write("urbain :\n")
+        f.write(separator)
+        f.write(describe(sales_urbain))
+        f.write(separator*2)
+        f.write("test d'hypothese sur les variances\n")
+        f.write(tester_variance(sales_urbain, sales_rural))
+        f.write(separator*2)
+        f.write("test d'hypothese sur les moyennes\n")
+        f.write(tester_moyenne(sales_urbain, sales_rural))
+    plt.savefig("partie_b.png")
+
 
 if __name__ == "__main__":
     main()
