@@ -82,7 +82,7 @@ def tester_variance(data1, data2):
 
 def describe(data):
     df = pd.DataFrame(data)
-    interval = stats.norm.interval(confidence=0.90,
+    interval = stats.norm.interval(confidence=0.95,
                                    loc=np.mean(data),
                                    scale=stats.sem(data))
     description = df.describe(include="all").to_dict()[0]
@@ -156,7 +156,6 @@ def main():
         f.write("test d'hypothese sur les moyennes\n")
         f.write(tester_moyenne(sales_urbain, sales_rural))
     plt.savefig("out/partie_b.png")
-
 
 if __name__ == "__main__":
     main()

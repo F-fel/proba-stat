@@ -1,0 +1,140 @@
+[1] "Starting..."
+[1] "plot"
+[1] "Intervalle de conviance du model1"
+                 2.5 %      97.5 %
+(Intercept) 12.1990475 15.21492320
+X1_m1       -0.1174765 -0.07311453
+
+Call:
+lm(formula = Y ~ X1_m1, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.3567 -1.8142 -0.0517  1.6400  7.0454 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 13.70699    0.76614  17.891  < 2e-16 ***
+X1_m1       -0.09530    0.01127  -8.456 1.41e-15 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 2.482 on 288 degrees of freedom
+Multiple R-squared:  0.1989,	Adjusted R-squared:  0.1961 
+F-statistic: 71.51 on 1 and 288 DF,  p-value: 1.405e-15
+
+[1] "Intervalle de conviance du model2"
+               2.5 %    97.5 %
+(Intercept) 17.18474 23.335788
+X1_m2       -1.88870 -1.164687
+
+Call:
+lm(formula = Y ~ X1_m2, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.2940 -1.7741 -0.0802  1.6452  7.0204 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  20.2603     1.5626  12.966  < 2e-16 ***
+X1_m2        -1.5267     0.1839  -8.301 4.06e-15 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 2.491 on 288 degrees of freedom
+Multiple R-squared:  0.1931,	Adjusted R-squared:  0.1903 
+F-statistic:  68.9 on 1 and 288 DF,  p-value: 4.061e-15
+
+[1] "Intervalle de conviance du model3"
+                    2.5 %        97.5 %
+(Intercept)  7.053611e+00  7.688584e+00
+X1_m3       -6.794649e-78 -8.838550e-79
+
+Call:
+lm(formula = Y ~ X1_m3, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-7.2111 -2.0336  0.0439  1.6539  7.5289 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  7.371e+00  1.613e-01  45.697   <2e-16 ***
+X1_m3       -3.839e-78  1.502e-78  -2.557   0.0111 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 2.742 on 288 degrees of freedom
+Multiple R-squared:  0.0222,	Adjusted R-squared:  0.0188 
+F-statistic: 6.538 on 1 and 288 DF,  p-value: 0.01107
+
+[1] "Intervalle de conviance du model4"
+                2.5 %   97.5 %
+(Intercept) 5.1866598 6.417658
+X2_m4       0.6608837 1.361723
+
+Call:
+lm(formula = Y ~ X2_m4, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-7.5825 -1.9646  0.0319  1.6669  8.4019 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   5.8022     0.3127   18.55  < 2e-16 ***
+X2_m4         1.0113     0.1780    5.68 3.29e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 2.63 on 288 degrees of freedom
+Multiple R-squared:  0.1007,	Adjusted R-squared:  0.09762 
+F-statistic: 32.27 on 1 and 288 DF,  p-value: 3.287e-08
+
+[1] "Intervalle de conviance du model5"
+               2.5 %   97.5 %
+(Intercept) 3.473581 5.550710
+X2_m5       2.255719 4.688224
+
+Call:
+lm(formula = Y ~ X2_m5, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-7.4898 -1.9781  0.0532  1.6871  8.4221 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   4.5121     0.5277   8.551 7.30e-16 ***
+X2_m5         3.4720     0.6179   5.619 4.54e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 2.633 on 288 degrees of freedom
+Multiple R-squared:  0.09879,	Adjusted R-squared:  0.09566 
+F-statistic: 31.57 on 1 and 288 DF,  p-value: 4.54e-08
+
+[1] "Intervalle de conviance du model6"
+                2.5 %    97.5 %
+(Intercept) -3.793661  1.942282
+X2_m6       16.138112 33.118847
+
+Call:
+lm(formula = Y ~ X2_m6, data = data)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-7.654 -1.954  0.011  1.662  8.381 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  -0.9257     1.4571  -0.635    0.526    
+X2_m6        24.6285     4.3137   5.709 2.82e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 2.628 on 288 degrees of freedom
+Multiple R-squared:  0.1017,	Adjusted R-squared:  0.09856 
+F-statistic:  32.6 on 1 and 288 DF,  p-value: 2.82e-08
+
